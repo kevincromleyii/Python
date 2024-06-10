@@ -1,0 +1,19 @@
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: black 0px 0px 5px;
+}
+
+button:hover {
+    background-color: #a8ffac;
+    box-shadow: black 0px 0px 0px;
+}
+
+/* Add a selector or remove the incomplete line */
+button:active {
+    background-color: #4CAF50;
+}
