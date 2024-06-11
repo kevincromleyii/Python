@@ -30,7 +30,7 @@ It is a sequence of characters enclosed in triple quotes.
 print(multi_line)
 
 # Escaping special characters
-sentence = 'I\'m learning Python!   \t  \n'
+sentence = 'I\'m learning Python!    \tTesting\nTesting'
 print(sentence)
 
 # String Methods
@@ -39,3 +39,7 @@ print(first)
 print(first.lower())
 print(first.upper())
 print(first)
+
+message = "Part 1 of message "
+message += "Part 2 of message"
+print(message) # Part 1 of message Part 2 of message because of string concatenation
