@@ -17,3 +17,13 @@ button:hover {
 button:active {
     background-color: #4CAF50;
 }
+
+#demo {
+    font-size: 20px;
+    color: red;
+}
+
+/* Add a selector or remove the incomplete line */
+#demo:hover {
+    color: green;
+}
