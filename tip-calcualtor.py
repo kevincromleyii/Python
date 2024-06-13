@@ -7,3 +7,4 @@ total_bill = bill + tip_amount
 bill_per_person = total_bill / num_of_people
 print(f"Each person should pay: ${bill_per_person:.2f}")
 print(f"Tip amount: ${tip_amount:.2f}")
+

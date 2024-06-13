@@ -1,4 +1,4 @@
-import python
-paintent_info = python.json_string
+import random
 
-print(paintent_info)    
+random.number = random.randint(1, 100)
+print(random.number)
