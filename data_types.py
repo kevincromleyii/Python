@@ -1,45 +1,42 @@
-# String data type is used to store text data. It is a sequence of characters enclosed in single quotes or double quotes.
-# Literal assignment
-first = 'Kevin'
-last = 'Cromley'
+weight = input("What is your weight in lbs? ")
+print(weight, "lbs")
 
-print(type(first)) 
-print(type(first) == str) 
-print(isinstance(first, str))
+h = input('Enter height in ft\'in": ')  # ask for input
+h_split = h.split('\'')  # break string into 2 parts where single quote occurs
+ft, inch = (h_split[0], h_split[1].split('"')[0])  # extract inches in a similar way
+ft = int(ft)  # convert feet to integer
+inch = int(inch)  # convert inches to integer
+height = ft*12 + inch  # convert feet to inches and add inches
 
-# Concatenation
-full_name = first + ' ' + last 
-print(full_name)
 
-full_name  += ' II'
-print(full_name)    
 
-# Casting a number to a string
-decade = str(2002)
-print(decade)
+def calculate_bmi(weight, height):
+    return (weight / (height * height)) * 703
 
-statement = "I was born in the year " + decade
-print(statement)
+# Function to assess health status
+def assess_health(bmi):
+    if bmi < 18.5:
+        return "Underweight"
+    elif bmi < 25:
+        return "Normal"
+    elif bmi < 30:
+        return "Overweight"
+    else:
+        return "Obese"
 
-# Multiple lines
-multi_line = '''
-This is a multi-line string.
-It is a sequence of characters enclosed in triple quotes.
-                              Testing
-'''
-print(multi_line)
+bmi = calculate_bmi(weight, height)
+health_status = assess_health(bmi)/ (height * height) * 703
 
-# Escaping special characters
-sentence = 'I\'m learning Python!    \tTesting\nTesting'
-print(sentence)
+# Function to assess health status
+def assess_health(bmi):
+    if bmi < 18.5:
+        return "Underweight"
+    elif bmi < 25:
+        return "Normal"
+    elif bmi < 30:
+        return "Overweight"
+    else:
+        return "Obese"
 
-# String Methods
-
-print(first)
-print(first.lower())
-print(first.upper())
-print(first)
-
-message = "Part 1 of message "
-message += "Part 2 of message"
-print(message) # Part 1 of message Part 2 of message because of string concatenation
+bmi = calculate_bmi(weight, height)
+health_status = assess_health(bmi)

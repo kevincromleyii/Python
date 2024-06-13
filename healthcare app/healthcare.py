@@ -1,8 +1,8 @@
 import Convert
+import json
 
 # Dictionary of patient information
-patient = {"name": "Kevin", "lastname": "Cromley", "age": 22}
-
+json_string = [{"name": "Kevin", "lastname": "Cromley", "age": 22}]
 
 # Use import functions
 weight = Convert.kg
@@ -29,6 +29,8 @@ def assess_health(bmi):
 bmi = calculate_bmi(weight, height)
 health_status = assess_health(bmi)
 
+json_strings_2 = ["BMI: ", bmi, "Health status: ", health_status]
+
 
 # Output
 print("===================")
@@ -36,7 +38,11 @@ print("===================")
 print("Patient Information")
 print("===================")
 print("===================")
-print(patient["name"], patient["lastname"])
-print(patient["age"], "Years old")
-print("BMI:", bmi)
-print("Health status:", health_status)
+print(json_string)
+print(json_strings_2)
+
+# Save the patient information to a file
+with open('patient_infos.json', 'w') as f:
+    json.dump(json_string, f)
+    json.dump(json_strings_2, f)
+    print("Patient information saved to file.")
