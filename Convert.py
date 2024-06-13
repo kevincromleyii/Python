@@ -1,16 +1,11 @@
-def lbs_to_kg(lbs):
-    return float(lbs) * 0.453592
-
-# Test the function
-lbs = input("Enter weight in lbs: ")
-kg = lbs_to_kg(lbs)
-print(f"{lbs} lbs is equal to {kg} kg.")
-
-def ft_to_m(ft):
-    return float(ft) * 0.3048
-    
-# Test the function
-ft = input("Enter height in ft: ")
-m = ft_to_m(ft)
-print(f"{ft} ft is equal to {m} m.")
-
+wt=int(input())
+ht=float(input())
+res=wt / float (ht * ht)
+if res < 18.5:
+ print("Underweight")
+elif res>=18.5 and  res<25:
+ print("Normal")
+elif res>=25 and res<30:
+  print("Overweight")
+else:
+ print("Obesity")

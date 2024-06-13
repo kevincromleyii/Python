@@ -1,22 +1,23 @@
-import Convert
+import json
 
-# Dictionary of patient information
-patient = {"name": "Kevin", "lastname": "Cromley", "age": 22}
+json_string = [{"name": "Kevin", "lastname": "Cromley", "age": 22}]
 
 
-# Use import functions
-weight = Convert.kg
-height = Convert.m
+ft = int(input("How many ft are you? "))
+inch = int(input("How many inches are you? "))
+inches = ft * 12 + inch
+    
 
-print(weight, "kg")
-print(height, "m")
+def weight():
+    weight = input("What is your weight in lbs? ")
+    print(weight, "lbs")
 
-# Function to calcualte BMI
-def calculate_bmi(weight, height):
-    return float(weight) / (float(height) ** 2)
 
-# Function to assess health status
-def assess_health(bmi):
+def bmi(weight, inches):
+    return (weight / (inches ** 2)) * 703                                  
+
+
+def health_status(bmi):
     if bmi < 18.5:
         return "Underweight"
     elif bmi < 25:
@@ -26,17 +27,14 @@ def assess_health(bmi):
     else:
         return "Obese"
 
-bmi = calculate_bmi(weight, height)
-health_status = assess_health(bmi)
 
-
-# Output
 print("===================")
 print("===================")
 print("Patient Information")
 print("===================")
 print("===================")
-print(patient["name"], patient["lastname"])
-print(patient["age"], "Years old")
-print("BMI:", bmi)
-print("Health status:", health_status)
+
+
+# Print patient information
+print(json_string)
+print("Your BMI and Health Satus:\n","BMI: ", bmi, "Health status:", health_status)
