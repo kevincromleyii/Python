@@ -46,3 +46,4 @@ with open('patient_infos.json', 'w') as f:
     json.dump(json_string, f)
     json.dump(json_strings_2, f)
     print("Patient information saved to file.")
+ 
