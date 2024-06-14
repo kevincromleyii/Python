@@ -19,13 +19,16 @@
 
     <h2>JavaScript in Body</h2>
     <p>JavaScript can be placed in the body section of an HTML document.</p>
-    <button onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me</button> 
+    <button>
+        <script> 
+            document.querySelector("button").addEventListener("click", function() {
+            window.open("/index.html/image.webp");
+        }); 
+        </script>
+
+    </button>
 </body>
 
-<section>
-    <h2>JavaScript in Head</h2>
-    <p>JavaScript can be placed in the head section of an HTML document.</p>
-</section>
 
 </html>
 

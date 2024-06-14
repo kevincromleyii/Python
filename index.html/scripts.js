@@ -7,5 +7,8 @@ window.onload = function () {
     button.addEventListener('click', handleClick);
 
 
+    // Add your code here
+if (
+
 }
 
