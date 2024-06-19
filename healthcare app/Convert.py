@@ -8,9 +8,6 @@ print(f"{lbs} lbs is equal to {kg} kg.")
 
 
 
-
-
-
 def ft_to_m(ft):
     return float(ft) * 0.3048
     

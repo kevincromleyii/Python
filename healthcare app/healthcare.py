@@ -49,12 +49,6 @@ patient_info["Health status:"] = health_status
 
 json_2 = json.dumps(patient_info, indent=4)
 
-
-# Output
-print("===================")
-print("Patient Information")
-print("===================")
-
 # Create a DataFrame with patient information
 df_data = {
     "Name": [name],
@@ -74,4 +68,4 @@ print("===================")
 print(df)
 
 # Writing patient information DataFrame to a JSON file
-df.to_json("patients_info.json", orient="records", lines=True)
+df.to_csv("patient_info.csv", index=False)
