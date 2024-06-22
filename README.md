@@ -1,0 +1,1 @@
+- Took everything I learned in python and scripted up a small program that takes in a doctors input for a patient and creates a .json file for said patient.
